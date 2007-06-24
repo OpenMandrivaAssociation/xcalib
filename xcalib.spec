@@ -1,49 +1,35 @@
-%define name    xcalib
-%define version 0.6
-%define release %mkrel 1
-
-Name:           %{name}
-Summary:        xcalib is a tiny monitor calibration loader 
-Version:        %{version} 
-Release:        %{release} 
-Source0:        %{name}-source-%{version}.tar.bz2 
-URL:            http://www.etg.e-technik.uni-erlangen.de/web/doe/xcalib/
-
-Group:          System/Configuration/Hardware
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot 
-License:        GPL
+Summary:        xcalib is a tiny monitor calibration loader
+Name:           xcalib
+Version:	0.7
+Release:	%mkrel 1
+License:	GPL
+Group:		System/Configuration/Hardware
+URL:		http://www.etg.e-technik.uni-erlangen.de/web/doe/xcalib
+Source0:	http://www.etg.e-technik.uni-erlangen.de/web/doe/xcalib/%{name}-source-%{version}.tar.bz2
 BuildRequires:	x11-proto-devel
 BuildRequires:	libx11-devel
 BuildRequires:	libxxf86vm-devel
-
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
-loads 'vcgt'-tag of ICC profiles to X-server like MS-Windows 
-or MacOS do it to calibrate your display.
-  
-Versions 0.5 and higher are also usable with Microsoft Windows. 
-They can be used as a free alternative to other calibration loaders.
+xcalib is a tiny monitor calibration loader for XFree86 (or X.org) 
 
 %prep
-%setup -q -a 0
+%setup -q
 
 %build
-make icclib_xcalib
+%make xcalib CFLAGS="%{optflags}" XLIBDIR=%{_libdir} XINCLUDEDIR=%{_includedir}
 
 %install
-rm -rf $RPM_BUILD_ROOT
-mkdir $RPM_BUILD_ROOT
-mkdir $RPM_BUILD_ROOT/usr
-mkdir $RPM_BUILD_ROOT/usr/bin
-cp xcalib $RPM_BUILD_ROOT/usr/bin/xcalib
+rm -rf %{buildroot}
+
+mkdir -p %{buildroot}%{_bindir}
+cp xcalib %{buildroot}%{_bindir}/xcalib
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
-%defattr(0644,root,root, 0755)
+%defattr(644,root,root,755)
 %doc README README.profilers COPYING
-%defattr(0755,root,root)
-%{_bindir}/xcalib
-
-
+%attr(755,root,root) %{_bindir}/%{name}
