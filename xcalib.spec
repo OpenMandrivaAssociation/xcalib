@@ -1,6 +1,6 @@
 Summary:        xcalib is a tiny monitor calibration loader
 Name:           xcalib
-Version:	0.7
+Version:	0.8
 Release:	%mkrel 1
 License:	GPL
 Group:		System/Configuration/Hardware
