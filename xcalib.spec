@@ -1,7 +1,7 @@
 Summary:        xcalib is a tiny monitor calibration loader
 Name:           xcalib
 Version:	0.8
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPL
 Group:		System/Configuration/Hardware
 URL:		http://www.etg.e-technik.uni-erlangen.de/web/doe/xcalib
@@ -31,5 +31,5 @@ rm -rf %{buildroot}
 
 %files
 %defattr(644,root,root,755)
-%doc README README.profilers COPYING
+%doc README README.profilers COPYING *.icc *.icm
 %attr(755,root,root) %{_bindir}/%{name}
