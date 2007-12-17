@@ -9,7 +9,6 @@ Source0:	http://www.etg.e-technik.uni-erlangen.de/web/doe/xcalib/%{name}-source-
 BuildRequires:	x11-proto-devel
 BuildRequires:	libx11-devel
 BuildRequires:	libxxf86vm-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 xcalib is a tiny monitor calibration loader for XFree86 (or X.org) 
