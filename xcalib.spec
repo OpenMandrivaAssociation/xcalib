@@ -1,7 +1,7 @@
 Summary:        Tiny monitor calibration loader
 Name:           xcalib
 Version:	0.8
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPL
 Group:		System/Configuration/Hardware
 URL:		http://www.etg.e-technik.uni-erlangen.de/web/doe/xcalib
