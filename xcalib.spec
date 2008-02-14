@@ -1,4 +1,4 @@
-Summary:        xcalib is a tiny monitor calibration loader
+Summary:        Tiny monitor calibration loader
 Name:           xcalib
 Version:	0.8
 Release:	%mkrel 2
