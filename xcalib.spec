@@ -7,8 +7,8 @@ Group:		System/Configuration/Hardware
 URL:		http://www.etg.e-technik.uni-erlangen.de/web/doe/xcalib
 Source0:	http://www.etg.e-technik.uni-erlangen.de/web/doe/xcalib/%{name}-source-%{version}.tar.bz2
 BuildRequires:	x11-proto-devel
-BuildRequires:	libx11-devel
-BuildRequires:	libxxf86vm-devel
+BuildRequires:	pkgconfig(x11)
+BuildRequires:	pkgconfig(xxf86vm)
 
 %description
 xcalib is a tiny monitor calibration loader for XFree86 (or X.org).
