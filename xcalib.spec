@@ -27,7 +27,7 @@ mkdir -p %{buildroot}%{_bindir}
 cp xcalib %{buildroot}%{_bindir}/xcalib
 
 %files
-%doc README README.profilers COPYING *.icc *.icm
+%doc README.md README.profilers COPYING *.icc *.icm
 %attr(755,root,root) %{_bindir}/%{name}
 
 
