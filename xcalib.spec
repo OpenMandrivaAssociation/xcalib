@@ -10,6 +10,7 @@ Source0:  https://github.com/OpenICC/xcalib/archive/refs/tags/%{version}/%{name}
 BuildRequires:	x11-proto-devel
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xxf86vm)
+BuildRequires:  pkgconfig(xrandr)
 
 %description
 xcalib is a tiny monitor calibration loader for XFree86 (or X.org).
