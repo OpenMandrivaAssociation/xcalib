@@ -7,6 +7,7 @@ Group:		System/Configuration/Hardware
 URL:		https://www.etg.e-technik.uni-erlangen.de/web/doe/xcalib
 Source0:  https://github.com/OpenICC/xcalib/archive/refs/tags/%{version}/%{name}-%{version}.tar.gz
 #Source0:	http://www.etg.e-technik.uni-erlangen.de/web/doe/xcalib/%{name}-source-%{version}.tar.bz2
+BuildRequires:	make
 BuildRequires:	x11-proto-devel
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xxf86vm)
